@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './Navbar.css';
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className={`nav_menu ${isMenuOpen ? 'show' : ''}`}>
         <ul>
-          <li><a href="#Hero" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+          <li><a href="#Hero" className="active-link" onClick={() => setIsMenuOpen(false)}>Home</a></li>
           <li><a href="#About" onClick={() => setIsMenuOpen(false)}>About</a></li>
           <li><a href="#Skill" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
           <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Project</a></li>
