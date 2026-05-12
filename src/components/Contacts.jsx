@@ -1,6 +1,5 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com"
 
@@ -16,14 +15,14 @@ const sendEmail = (e) => {
       e.target,
       "YOUR_USER_ID"
     )
-    .then(
-      (result) => {
-        alert("Message sent successfully!");
-      },
-      (error) => {
-        alert("Failed to send the message. Please try again.");
-      }
-    );
+      .then(
+        () => {
+          alert("Message sent successfully!");
+        },
+        () => {
+          alert("Failed to send the message. Please try again.");
+        }
+      );
 
   e.target.reset();
 };
@@ -31,7 +30,7 @@ const sendEmail = (e) => {
     <section id="contact" className="contact-section">
       <h2 className="section-title">Contact</h2>
       <p className="section-description">
-        I'd love to hear from you! Whether you have a question or just want to say hi, feel free to reach out.
+        I&apos;d love to hear from you! Whether you have a question or just want to say hi, feel free to reach out.
       </p>
       
       <div className="contact-container">
@@ -66,12 +65,31 @@ const sendEmail = (e) => {
         {/* Contact Info */}
         <div className="contact-info">
           <div className="info-item">
-            <FontAwesomeIcon icon={faEnvelope} className="info-icon" />
-            <span>siddharthkr9128@gmail.com</span>
+            <div className="info-icon-circle">
+              <FontAwesomeIcon icon={faEnvelope} className="info-icon" />
+            </div>
+            <div>
+              <h4>Email</h4>
+              <span>siddharthkr9128@gmail.com</span>
+            </div>
           </div>
           <div className="info-item">
-            <FontAwesomeIcon icon={faPhone} className="info-icon" />
-            <span>+123 456 7890</span>
+            <div className="info-icon-circle">
+              <FontAwesomeIcon icon={faPhone} className="info-icon" />
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <span>+123 456 7890</span>
+            </div>
+          </div>
+          <div className="info-item">
+            <div className="info-icon-circle">
+              <FontAwesomeIcon icon={faLocationDot} className="info-icon" />
+            </div>
+            <div>
+              <h4>Location</h4>
+              <span>Patna, India</span>
+            </div>
           </div>
           <div className="social-links">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">

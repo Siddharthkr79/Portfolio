@@ -1,20 +1,20 @@
 .project-card {
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+    text-align: left;
   }
   
   .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.14);
   }
   
   .project-image {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s, filter 0.3s; /* Add hover animation */
   }
@@ -24,38 +24,51 @@
     filter: brightness(90%);
   }
   
-  .project-content {
-    padding: 20px;
+.project-content {
+    padding: 20px 20px 24px;
   }
   
   .project-content h3 {
-    font-size: 1.5rem;
-    margin: 0 0 10px;
+    font-size: 1.25rem;
+    margin: 0 0 8px;
+    color: #1e1e1e;
   }
   
   .project-content p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.95rem;
+    color: #585858;
     margin: 0 0 15px;
+    min-height: 44px;
   }
   
   .project-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf50;
+    padding: 10px 16px;
+    background-color: #f4b400;
+    font-weight: 600;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s;
   }
   
   .project-link:hover {
-    background-color: #45a049;
+    background-color: #d99d00;
   }
   .project-tags{
-    margin-bottom: 5px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 6px;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #fff4cf;
+    color: #8c6500;
+    font-weight: 500;
   }
